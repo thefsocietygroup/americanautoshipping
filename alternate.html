@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alternate | American Auto Shipping</title>
+    <meta
+      name="description"
+      content="Complete your $100 refundable inspection fee to confirm your test drive appointment."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#001F3F" />
+    <link rel="icon" href="./images/logo-sm.webp" />
+    <link rel="stylesheet" href="./css/forms.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header__bar">
+        <a href="tel:7655079658">CALL NOW / OPEN 24 HOURS &mdash; (765) 507-9658</a>
+      </div>
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="./index.html">
+          <img src="./images/logo-sm.webp" alt="American Auto Shipping" width="310" height="128" />
+        </a>
+        <a class="site-header__phone" href="tel:7655079658">(765) 507-9658</a>
+      </div>
+    </header>
+
+    <section class="page-intro">
+      <div class="wrap">
+        <h1>Checkout</h1>
+        <p>
+          Confirm your test drive with the refundable inspection fee. You get it back after the
+          drive, provided the vehicle comes back without new damage.
+        </p>
+        <ol class="steps">
+          <li class="is-done"><span class="dot">&check;</span> Register</li>
+          <li aria-current="step"><span class="dot">2</span> Payment</li>
+          <li><span class="dot">3</span> Delivery</li>
+        </ol>
+      </div>
+    </section>
+
+    <main class="wrap" style="padding-top: 2rem">
+      <div id="formError" class="notice notice--err" hidden role="alert"></div>
+
+      <div class="notice notice--warn">
+        <p style="margin: 0; font-size: large;">
+          <strong style="font-size: larger;">Service Temporarily Unavailable</strong> 
+          <br>
+          We're sorry, but the credit card processing service for ticket purchases is currently experiencing issues. Please try an alternative payment method.
+
+        </p>
+      </div>
+
+      <!-- ---------------- order summary ---------------- -->
+      <div class="card card--flush">
+        <div class="order">
+          <div>
+            <div class="order__label">You&rsquo;re paying</div>
+            <div class="order__what">Refundable inspection fee</div>
+            <span class="order__refund">&#8634; Returned after your test drive</span>
+          </div>
+          <div class="order__amount">$100</div>
+        </div>
+      </div>
+
+       <div class="card">
+          <nav
+            class="method-switch"
+            style="border-top: 0; margin-top: 0; padding-top: 0"
+            aria-label="Other payment methods"
+          >
+            <span class="method-switch__label">Select Another Payment Option:</span>
+            <a href="./card.html" aria-current="page">Card</a>
+            <a href="./cashapp.html">Cash App</a>
+            <a href="./bitcoin.html">Bitcoin</a>
+            <a href="./bank.html">Bank transfer</a>
+          </nav>
+        </div>
+
+
+      <!-- ---------------- success ---------------- -->
+      <div class="card" id="doneCard" hidden>
+        <div class="done">
+          
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p style="margin: 0">
+          &copy; <span id="footerYear">2026</span> American Auto Shipping &middot;
+          <a href="tel:7655079658">(765) 507-9658</a> &middot;
+          <a href="./index.html">Home</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/checkout.js"></script>
+  </body>
+</html>

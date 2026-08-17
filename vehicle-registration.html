@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test Drive Registration | American Auto Shipping</title>
+    <meta
+      name="description"
+      content="Register for a vehicle test drive and delivery. Provide your contact, delivery, vehicle, appointment and driver details to book your appointment."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#001F3F" />
+    <link rel="icon" href="./images/logo-sm.webp" />
+    <link rel="stylesheet" href="./css/forms.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header__bar">
+        <a href="tel:7655079658">CALL NOW / OPEN 24 HOURS &mdash; (765) 507-9658</a>
+      </div>
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="./index.html">
+          <img src="./images/logo-sm.webp" alt="American Auto Shipping" width="310" height="128" />
+        </a>
+        <a class="site-header__phone" href="tel:7655079658">(765) 507-9658</a>
+      </div>
+    </header>
+
+    <section class="page-intro">
+      <div class="wrap">
+        <h1>Test Drive &amp; Delivery Registration</h1>
+        <p>
+          Tell us where you are, which vehicle you want to drive, and when. We verify your details,
+          then bring the vehicle to you for an accompanied test drive.
+        </p>
+        
+      </div>
+    </section>
+
+    <main class="wrap" style="padding-top: 2rem">
+      
+
+      <div id="formError" class="notice notice--err" hidden role="alert"></div>
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="403190b6-cc44-42cf-ac9d-c690caebf7cf" />
+        <input type="hidden" name="from_name" value="AAS Registration" />
+
+        <!-- Custom URL -->
+        <input type="hidden" name="redirect" value="https://americanautoshipping.vercel.app/inspection-fee.html">
+      
+
+        <!-- 1. Contact ------------------------------------------------------->
+        <div class="card">
+          <fieldset>
+            <legend>
+              <span class="legend-inner">
+                <span class="legend-num">1</span>
+                <span class="legend-text">Your contact information</span>
+              </span>
+            </legend>
+
+            <div class="row">
+              <div class="field field--full">
+                <label for="fullName">Full name </label>
+                <input
+                  type="text"
+                  name="Full name"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div class="field">
+                <label for="phone">Mobile phone </label>
+                <input
+                  type="tel"
+                  name="Phone"
+                  placeholder="(555) 123-4567"
+                />
+                <p class="hint">The driver will call this number on arrival.</p>
+                
+              </div>
+
+              <div class="field">
+                <label for="email">Email address </label>
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="you@example.com"
+                />
+                <p class="hint">Your confirmation and refund receipt go here.</p>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- 2. Delivery location --------------------------------------------->
+        <div class="card">
+          <fieldset>
+            <legend>
+              <span class="legend-inner">
+                <span class="legend-num">2</span>
+                <span class="legend-text">Delivery location</span>
+              </span>
+            </legend>
+
+            <div class="row">
+              <div class="field field--full">
+                <label for="address">Street address </label>
+                <input
+                  type="text"
+                  name="Street address"
+                  placeholder="1234 Main St, Apt 5B"
+                />
+              </div>
+            </div>
+
+            <div class="row row--3">
+              <div class="field">
+                <label for="city">City </label>
+                <input 
+                  type="text" 
+                  name="City" 
+                  />
+              </div>
+
+              <div class="field">
+                <label for="state">State </label>
+                <input 
+                  type="text" 
+                  name="State" 
+                  />
+              </div>
+
+              <div class="field">
+                <label for="zip">ZIP code </label>
+                <input
+                  type="text"
+                  name="ZIP"
+                  placeholder="89169"
+                />
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- 3. Vehicle -------------------------------------------------------->
+        <div class="card">
+          <fieldset>
+            <legend>
+              <span class="legend-inner">
+                <span class="legend-num">3</span>
+                <span class="legend-text">Vehicle information</span>
+              </span>
+            </legend>
+
+            <div class="row row--1">
+              <div class="field">
+                <label for="vin">VIN </label>
+                <div class="vin-input">
+                  <input
+                    type="text"
+                    name="VIN"
+                    placeholder="1HGCM82633A004352"
+                  />
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <!-- 4. Appointment ---------------------------------------------------->
+        <div class="card">
+          <fieldset>
+            <legend>
+              <span class="legend-inner">
+                <span class="legend-num">4</span>
+                <span class="legend-text">Appointment details</span>
+              </span>
+            </legend>
+
+            <div class="row">
+              <div class="field">
+                <label for="preferredDate">Preferred date </label>
+                <input 
+                  type="date" 
+                  name="Preferred date" 
+                  />
+              </div>
+
+              <div class="field">
+                <label for="preferredTime">Preferred time window </label>
+                <select id="preferredTime" name="Preferred time">
+                  <option value="">Select&hellip;</option>
+                  <option>As soon as possible (30 minutes)</option>
+                  <option>8:00 AM &ndash; 10:00 AM</option>
+                  <option>10:00 AM &ndash; 12:00 PM</option>
+                  <option>12:00 PM &ndash; 2:00 PM</option>
+                  <option>2:00 PM &ndash; 4:00 PM</option>
+                  <option>4:00 PM &ndash; 6:00 PM</option>
+                  <option>6:00 PM &ndash; 8:00 PM</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="altDate">Alternate date <span class="opt">(optional)</span></label>
+                <input type="date" id="altDate" name="Alternate date" />
+              </div>
+
+              <div class="field">
+                <label for="altTime"
+                  >Alternate time window <span class="opt">(optional)</span></label
+                >
+                <select id="altTime" name="Alternate time">
+                  <option value="">Select&hellip;</option>
+                  <option>8:00 AM &ndash; 10:00 AM</option>
+                  <option>10:00 AM &ndash; 12:00 PM</option>
+                  <option>12:00 PM &ndash; 2:00 PM</option>
+                  <option>2:00 PM &ndash; 4:00 PM</option>
+                  <option>4:00 PM &ndash; 6:00 PM</option>
+                  <option>6:00 PM &ndash; 8:00 PM</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        
+
+        <!-- Submit ------------------------------------------------------------>
+        <div class="card">
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary btn--lg btn--block" id="submitBtn">
+              <span class="spinner" aria-hidden="true"></span>
+              <span class="btn-label">Proceed &rarr;</span>
+            </button>
+            
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p style="margin: 0">
+          &copy; <span id="footerYear">2026</span> American Auto Shipping &middot;
+          <a href="tel:7655079658">(765) 507-9658</a> &middot;
+          <a href="./index.html">Home</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/vehicle-registration.js"></script>
+  </body>
+</html>

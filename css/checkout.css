@@ -1,0 +1,253 @@
+/* ---------------------------------------------------------------------------
+   checkout.html — order summary, pay-to details and copy-to-clipboard rows.
+   Loaded on top of forms.css, which supplies the palette, form controls and
+   the shared payment-method chooser.
+--------------------------------------------------------------------------- */
+
+/* ---------- order summary ---------- */
+
+.order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, var(--surface-tint), var(--surface));
+  border-bottom: 1px solid var(--line);
+  padding: 1.35rem 1.5rem;
+}
+.order__label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.order__what {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin-top: 0.15rem;
+}
+.order__amount {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--navy-dark);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.order__refund {
+  display: inline-block;
+  margin-top: 0.4rem;
+  background: var(--green-bg);
+  color: var(--green);
+  border: 1px solid #86efac;
+  border-radius: 999px;
+  padding: 0.22rem 0.7rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- pay-to rows with copy button ---------- */
+
+.payto {
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+}
+.payto__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4rem;
+}
+.payto__row {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+.payto__value {
+  flex: 1;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-mono, ui-monospace, Consolas, monospace);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  word-break: break-all;
+  display: flex;
+  align-items: center;
+}
+.payto__value--sm {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.copy-btn {
+  flex: none;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--navy);
+  border-radius: var(--radius);
+  padding: 0 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+  white-space: nowrap;
+}
+.copy-btn:hover {
+  background: var(--surface-tint);
+  border-color: var(--navy);
+}
+.copy-btn.is-copied {
+  background: var(--green-bg);
+  border-color: #86efac;
+  color: var(--green);
+}
+
+/* ---------- ordered steps ---------- */
+
+.howto {
+  counter-reset: step;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+.howto li {
+  counter-increment: step;
+  position: relative;
+  padding: 0 0 0.75rem 2.1rem;
+  font-size: 0.87rem;
+  color: var(--dark-light);
+}
+.howto li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+.howto li:last-child {
+  padding-bottom: 0;
+}
+
+/* ---------- card-disabled state ---------- */
+
+.card-off {
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  border: 2px dashed var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+}
+.card-off__icon {
+  font-size: 2rem;
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.6rem;
+  opacity: 0.5;
+}
+.card-off__title {
+  font-weight: 800;
+  color: var(--navy-dark);
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+.card-off__body {
+  font-size: 0.87rem;
+  color: var(--dark-light);
+  max-width: 34rem;
+  margin: 0 auto;
+}
+
+/* ---------- switch between the single-method pages ---------- */
+
+.method-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  border-top: 1px solid var(--line);
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+.method-switch__label {
+  color: var(--muted);
+  font-weight: 600;
+}
+.method-switch a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.28rem 0.8rem;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s;
+}
+.method-switch a:hover {
+  background: var(--surface-tint);
+  border-color: var(--navy);
+}
+.method-switch a[aria-current="page"] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+  cursor: default;
+}
+
+/* ---------- success ---------- */
+
+.done {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+.done__tick {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #fff;
+  font-size: 1.8rem;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1rem;
+}
+.done h2 {
+  font-size: 1.4rem;
+}
+.done__ref {
+  display: inline-block;
+  font-family: var(--font-mono, ui-monospace, Consolas, monospace);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--navy-dark);
+  background: var(--surface-tint);
+  border: 1px solid #c7d7ee;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0 1rem;
+}

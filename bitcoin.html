@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bitcoin | American Auto Shipping</title>
+    <meta
+      name="description"
+      content="Pay your $100 refundable inspection fee with Cash App to confirm your test drive appointment."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#001F3F" />
+    <link rel="icon" href="./images/logo-sm.webp" />
+    <link rel="stylesheet" href="./css/forms.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header__bar">
+        <a href="tel:7655079658">CALL NOW / OPEN 24 HOURS &mdash; (765) 507-9658</a>
+      </div>
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="./index.html">
+          <img src="./images/logo-sm.webp" alt="American Auto Shipping" width="310" height="128" />
+        </a>
+        <a class="site-header__phone" href="tel:7655079658">(765) 507-9658</a>
+      </div>
+    </header>
+
+    <section class="page-intro">
+      <div class="wrap">
+        <h1>Pay with Bitcoin</h1>
+        <p>
+          Confirm your test drive with the refundable inspection fee. You get it back after the
+          drive, provided the vehicle comes back without new damage.
+        </p>
+        <ol class="steps">
+          <li class="is-done"><span class="dot">&check;</span> Register</li>
+          <li aria-current="step"><span class="dot">2</span> Payment</li>
+          <li><span class="dot">3</span> Delivery</li>
+        </ol>
+      </div>
+    </section>
+
+    <main class="wrap" style="padding-top: 2rem">
+      <div id="formError" class="notice notice--err" hidden role="alert"></div>
+
+      <!-- ---------------- order summary ---------------- -->
+      <div class="card card--flush">
+        <div class="order">
+          <div>
+            <div class="order__label">You&rsquo;re paying</div>
+            <div class="order__what">Refundable inspection fee</div>
+            <span class="order__refund">&#8634; Returned after your test drive</span>
+          </div>
+          <div class="order__amount">$100</div>
+        </div>
+      </div>
+
+
+      <div class="card">
+          <nav
+            class="method-switch"
+            style="border-top: 0; margin-top: 0; padding-top: 0"
+            aria-label="Other payment methods"
+          >
+            <span class="method-switch__label">Select Payment Option:</span>
+            <a href="./card.html">Card</a>
+            <a href="./cashapp.html">Cash App</a>
+            <a href="./bitcoin.html" aria-current="page">Bitcoin</a>
+            <a href="./bank.html">Bank transfer</a>
+          </nav>
+        </div>
+
+      <form id="checkoutForm" data-payment-method="Cash App" novalidate>
+        <input type="hidden" name="access_key" value="403190b6-cc44-42cf-ac9d-c690caebf7cf" />
+        <input type="hidden" name="from_name" value="AAS Checkout" />
+        <input type="hidden" name="reference" id="reference" value="" />
+        <input type="hidden" name="Amount" value="$100 refundable inspection fee" />
+        <input type="hidden" name="Payment method" id="methodField" value="" />
+
+        <!-- ---------------- how to pay ---------------- -->
+        <div class="card">
+          <fieldset>
+            <legend>
+              <span class="legend-inner">
+                <span class="legend-num">1</span>
+                <span class="legend-text">Send the payment</span>
+              </span>
+            </legend>
+
+            <div class="panel__title"><span aria-hidden="true">&#128241;</span> Bitcoin</div>
+
+            <div class="payto">
+              <div class="payto__label">
+                Send $100 to this Bitcoin Address
+              </div>
+              <div class="payto__row">
+                <div class="payto__value" id="cashtag">
+                  bc1quyqzpr7lnzs4jm9d2kmtf4r5vm3q23wzjedyjv
+                </div>
+                <button type="button" class="copy-btn" data-copy="cashtag">Copy</button>
+              </div>
+            </div>
+
+            <p>
+              Once we receive your payment, we will contact you via email and text.
+            </p>
+
+            <br>
+
+            <ol class="howto">
+
+              <span class="legend-text">How to pay with Bitcoin</span><hr><br>
+
+              <span class="legend-text">Guardarian</span> <br><br>
+
+              <li>
+                Go to guardarian.com.
+              </li>
+              <li>
+                Select "Buy Bitcoin".
+              </li>
+              <li>
+                Input $100 and click on "Buy" or "Get Started".
+              </li>
+              <li>
+                Paste the bitcoin address below and click on send.
+              </li> <br>
+
+               </ol>
+
+
+
+               <ol class="howto">
+              <span class="legend-text">Paybis</span> <br><br>
+              
+              <li>
+                Go to paybis.com.
+              </li>
+              <li>
+                Select "Buy Bitcoin".
+              </li>
+              <li>
+                Input $100 and click on "Buy" or "Get Started".
+              </li>
+              <li>
+                Paste the bitcoin address below and click on send.
+              </li> </ol> <br>
+
+
+
+              <ol class="howto">
+              <span class="legend-text">Coinmama</span> <br><br>
+              
+              <li>
+                Go to coinmama.com.
+              </li>
+              <li>
+                Select "Buy Bitcoin"
+              </li>
+              <li>
+                Input $100 and click on "Buy" or "Get Started".
+              </li>
+              <li>
+                Paste the bitcoin address below and click on send
+              </li> </ol> <br> 
+
+
+
+              <ol class="howto">
+            <span class="legend-text">PayPal</span> <br><br>
+              
+              <li>
+                Fund your PayPal with $100.
+              </li>
+              <li>
+                Go to "Finances" in the Home Tab.
+              </li>
+              <li>
+                In Finances, click on the "Crypto Tab" or "Crypto Balance" and select "Bitcoin".
+              </li>
+              <li>
+                 Click on the "Transfer Arrows" and send.
+              </li>
+              <li>
+                In the search bar, paste the bitcoin address below and send.
+              </li> </ol> <br> 
+
+
+
+              <ol class="howto">
+              <span class="legend-text">Trust Wallet</span> <br><br>
+              
+              <li>
+                Download Trust Wallet from the Apple Store or Play Store and sign up.
+              </li>
+              <li>
+                Fund your Trust Wallet account with $100.
+              </li>
+              <li>
+                In the home tab, click on "Bitcoin" and click "Send".
+              </li>
+              <li>
+                Paste the Bitcoin Address below and send.
+              </li> </ol> <br>  
+
+
+
+              <ol class="howto">
+              <span class="legend-text">Coinbase</span> <br><br>
+              
+              <li>
+                Download Coinbase from the Apple Store or Play Store and sign up.
+              </li>
+              <li>
+                After logging in, you'll be on the Coinbase dashboard. Click on the "Portfolio" or "Accounts" tab to access your cryptocurrency wallets.
+              </li>
+              <li>
+                Locate your Bitcoin wallet from the list of cryptocurrencies. Click on it to open the wallet.
+              </li>
+              <li>
+                Look for the "Send" or "Send/Receive" button within your Bitcoin wallet. Click on it to initiate the sending process.
+              </li>
+              <li>
+                In the provided field, paste the Bitcoin address below and the amount, then click "Send".
+              </li> </ol> <br> 
+
+
+
+           
+
+
+
+
+      </form>
+
+      <!-- ---------------- success ---------------- -->
+      <div class="card" id="doneCard" hidden>
+        <div class="done">
+          <div class="done__tick" aria-hidden="true">&check;</div>
+          <h2>Thanks &mdash; we&rsquo;ve got it</h2>
+          <p style="font-size: 0.9rem; color: var(--dark-light)">Your booking reference is</p>
+          <div class="done__ref" id="doneRef"></div>
+          <p style="font-size: 0.9rem; color: var(--dark-light); max-width: 34rem; margin: 0 auto">
+            We&rsquo;ll match your Cash App payment against our records and call you on the number
+            you gave us to confirm the appointment. If anything doesn&rsquo;t match we&rsquo;ll be
+            in touch straight away on <a href="tel:7655079658">(765) 507-9658</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p style="margin: 0">
+          &copy; <span id="footerYear">2026</span> American Auto Shipping &middot;
+          <a href="tel:7655079658">(765) 507-9658</a> &middot;
+          <a href="./index.html">Home</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/checkout.js"></script>
+  </body>
+</html>

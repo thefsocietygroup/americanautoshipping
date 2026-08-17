@@ -1,0 +1,223 @@
+/* ---------------------------------------------------------------------------
+   Styles for payment-test.html — the sandbox harness.
+   Loaded on top of forms.css, which supplies the palette and base controls.
+--------------------------------------------------------------------------- */
+
+/* ---------- unmissable test-mode banner ---------- */
+
+.testbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: repeating-linear-gradient(45deg, #facc15, #facc15 12px, #1e293b 12px, #1e293b 24px);
+  padding: 4px;
+}
+.testbar__inner {
+  background: #1e293b;
+  color: #facc15;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.55rem 1rem;
+  border-radius: 4px;
+}
+
+/* The method chooser, panel and .detail styles this page uses now live in
+   forms.css, shared with checkout.html. */
+
+/* ---------- test card reference ---------- */
+
+.testcards {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+.testcards th,
+.testcards td {
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+.testcards th {
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.testcards code {
+  font-size: 0.8rem;
+  background: var(--surface-tint);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+/* ---------- simulator controls ---------- */
+
+.sim-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 640px) {
+  .sim-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- result ---------- */
+
+.result {
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  border: 1px solid;
+  display: none;
+}
+.result.is-visible {
+  display: block;
+}
+.result__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.result__badge {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+  flex: none;
+}
+.result--success {
+  background: var(--green-bg);
+  border-color: #86efac;
+  color: #14532d;
+}
+.result--success .result__badge {
+  background: #16a34a;
+  color: #fff;
+}
+.result--pending {
+  background: var(--amber-bg);
+  border-color: #fcd34d;
+  color: #78350f;
+}
+.result--pending .result__badge {
+  background: #d97706;
+  color: #fff;
+}
+.result--failed {
+  background: #fef2f2;
+  border-color: #fca5a5;
+  color: #7f1d1d;
+}
+.result--failed .result__badge {
+  background: #dc2626;
+  color: #fff;
+}
+.result dl {
+  margin: 0.75rem 0 0;
+  display: grid;
+  grid-template-columns: minmax(8rem, auto) 1fr;
+  gap: 0.35rem 1rem;
+  font-size: 0.82rem;
+}
+.result dt {
+  font-weight: 700;
+  opacity: 0.75;
+}
+.result dd {
+  margin: 0;
+  font-family: var(--font-mono, ui-monospace, Consolas, monospace);
+  word-break: break-all;
+}
+
+/* ---------- event log ---------- */
+
+.log {
+  background: #0f172a;
+  color: #cbd5e1;
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  font-family: var(--font-mono, ui-monospace, Consolas, monospace);
+  font-size: 0.76rem;
+  line-height: 1.7;
+  max-height: 15rem;
+  overflow-y: auto;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.log:empty::before {
+  content: "No events yet — run a simulated payment.";
+  color: #64748b;
+  font-style: italic;
+}
+.log .t {
+  color: #64748b;
+}
+.log .ok {
+  color: #4ade80;
+}
+.log .warn {
+  color: #fbbf24;
+}
+.log .err {
+  color: #f87171;
+}
+.log .info {
+  color: #60a5fa;
+}
+
+/* ---------- comparison table ---------- */
+
+.compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.compare {
+  width: 100%;
+  min-width: 40rem;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.compare th,
+.compare td {
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.compare thead th {
+  background: var(--surface-alt);
+  color: var(--navy-dark);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--line-strong);
+}
+.compare tbody th {
+  font-weight: 700;
+  color: var(--navy-dark);
+  white-space: nowrap;
+}
+.yes {
+  color: var(--green);
+  font-weight: 700;
+}
+.no {
+  color: #b91c1c;
+  font-weight: 700;
+}
+.compare tr.is-recommended td,
+.compare tr.is-recommended th {
+  background: var(--green-bg);
+}
