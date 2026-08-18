@@ -13,7 +13,7 @@
   "use strict";
 
   /* =========================================================================
-     To switch card payments on: create a $100 payment link with your processor
+     To switch card payments on: create a $10 payment link with your processor
      (Stripe → Payment links, Square → Checkout links, PayPal → payment link)
      and paste it here. The card option enables itself and redirects to it.
      ========================================================================= */
@@ -220,7 +220,7 @@
     if (!$("bankEmail")) return;
     var subject = "Bank transfer details request" + (reference ? " — " + reference : "");
     var body =
-      "Hello,\n\nPlease send me your bank details so I can pay the $100 refundable " +
+      "Hello,\n\nPlease send me your bank details so I can pay the $10 refundable " +
       "inspection fee.\n\n" +
       (reference ? "Booking reference: " + reference + "\n" : "") +
       "\nThank you.";

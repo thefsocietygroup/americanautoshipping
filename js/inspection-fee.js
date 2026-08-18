@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------------
-   Inspection fee page — $100 refundable, charged to confirm a test drive.
+   Inspection fee page — $10 refundable, charged to confirm a test drive.
 
    This page never touches card data. It reads the booking summary left by the
    registration form and hands the customer to a hosted checkout, which is the
@@ -13,9 +13,9 @@
   /* =========================================================================
      CONFIGURE ME — paste your hosted checkout URL below.
 
-     Stripe:  Dashboard → Payment links → create a $100 link
+     Stripe:  Dashboard → Payment links → create a $10 link
               https://buy.stripe.com/xxxxxxxxxxxx
-     PayPal:  Business tools → PayPal buttons, or a $100 payment link
+     PayPal:  Business tools → PayPal buttons, or a $10 payment link
               https://www.paypal.com/ncp/payment/xxxxxxxx
      Square:  Online → Checkout links
               https://square.link/u/xxxxxxxx

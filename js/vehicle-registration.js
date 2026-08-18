@@ -197,7 +197,7 @@
   var CHECKBOXES = {
     confirmDocs: "Please confirm you'll present your licence and insurance.",
     agreeTerms: "You must accept the terms to continue.",
-    agreeFee: "Please confirm you understand the $100 refundable fee.",
+    agreeFee: "Please confirm you understand the $10 refundable fee.",
   };
 
   function showError(id, message) {
